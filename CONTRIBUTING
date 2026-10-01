@@ -1,0 +1,99 @@
+Índice
+======
+
+- Padrões de Branch
+- Mensagens de Commit
+- Versionamento Semântico
+- Padrão de Nomeação
+- Workflow
+
+
+Padrões de Branch
+=================
+
+O padrão de branch a ser seguido é lowercase-kebab-case.
+
+A branch main é protegida, então somente Pull Requests para main poderão
+atualizá-la.
+
+Teremos dois padrões de branches, baseado na estratégia de branches Git Flow:
+
+- feature/: para desenvolvimento de novas funcionalidades (ex: feature/user-profile). 
+- hotfix/: para correções urgentes em produção (ex: hotfix/fix-login-bug).
+
+
+Mensagens de Commit
+===================
+
+Formato: <tipo>: <descrição>
+
+Tipos utilizados:
+
+- feat: nova funcionalidade.
+- fix: correção de um problema.
+- docs: alterações na documentação.
+- style: alterações de formatação ou estilo que não alteram o funcionamento.
+- refactor: alteração no código que não adiciona funcionalidade nem corrige
+  um problema.
+- test: adição ou alteração de testes.
+- chore: alterações de manutenção ou tarefas auxiliares.
+
+Breaking changes: para commits que introduzem alguma mudança incompatível,
+colocar um ! após o tipo.
+
+Exemplo:
+
+feat!: corrigir erro de validação
+
+
+Versionamento Semântico
+=======================
+
+O projeto seguirá o padrão de Versionamento Semântico (SemVer).
+
+Formato: MAJOR.MINOR.PATCH
+
+- MAJOR: quando houver mudanças incompatíveis com versões anteriores.
+- MINOR: quando forem adicionadas novas funcionalidades de forma compatível.
+- PATCH: quando forem realizadas correções compatíveis.
+
+Breaking changes: mudanças incompatíveis devem incrementar a versão MAJOR.
+
+Exemplo:
+
+1.0.0 → 2.0.0
+
+
+Padrão de Nomeação
+==================
+
+Para padronizar o projeto, favor utilizarem somente lower-kebab-case e camelCase
+tanto no frontend quanto no backend.
+
+Sugiro utilizarem camelCase para:
+
+- Variáveis
+- Funções
+- Métodos
+
+Sugiro utilizarem lower-kebab-case para:
+
+- Arquivos
+- Diretórios
+- Branches
+
+Usem PascalCase apenas em nomes de classes.
+
+Para a linguagem do projeto, sugiro utilizarem o inglês.
+
+
+Workflow
+========
+
+- Verificar as issues disponíveis no Project.
+- Criar sua branch a partir da develop com o nome da issue atribuída a você.
+- Realizar o desenvolvimento da tarefa.
+- Criar os commits seguindo o padrão definido.
+- Ao terminar, não esquecer de criar o Pull Request apontando para a develop.
+- Aguardar a revisão e aprovação do Pull Request.
+- Após a aprovação, realizar o merge para a develop. 
